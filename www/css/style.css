@@ -1,0 +1,138 @@
+.centerHorizontal {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align:center;
+}
+
+@font-face {
+    font-family: 'Ebrima';
+    src: url('Ebrima.ttf');
+}
+
+@font-face {
+    font-family: 'Century Gothic';
+    src: url('Century%20Gothic.ttf');
+}
+
+.mainButton{
+    border: 2px solid;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    color: white;
+    font-size: 30px;
+    font-family:Ebrima;
+}
+
+.loginCircle{
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    border: 2px solid;
+    border-color: #19bfef;
+    font-size: 13px;
+    color: #19bfef;
+    background: none;
+}
+
+.circleFill {
+    background: #19bfef;
+    color: #ffffff;
+}
+
+.recordCircle{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border: 2px solid;
+    border-color: #19bfef;
+    font-size: 15px;
+    color: #19bfef;
+    background: none;
+}
+
+.recordFill {
+    background: #19bfef;
+    color: #ffffff;
+}
+
+.themeColor {
+    color: #005dbb;
+    font-family: Century Gothic;
+}
+
+.button-theme {
+    background: #19bfef;
+    border: #19bfef;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 0 12px;
+    min-width: 52px;
+    min-height: 47px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    vertical-align: top;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    line-height: 42px;
+}
+
+.wrapping-list .item-content, .wrapping-list .item {
+    overflow: initial;
+    white-space: initial;
+}
+
+input[type="text"]:disabled, input[type="password"]:disabled {
+    color: black;
+    background: white;
+}
+
+input[type="text"]:read-only, input[type="password"]:read-only {
+    color: black;
+    background: white;
+}
+
+input[type='button']:disabled, button:disabled
+{
+    color: black;
+}
+
+.scroll-bar-indicator
+{
+    display: none;
+}
+
+.popup50 .popup{
+    width: 50% !important;
+}
+
+.row:nth-child(even) {
+    background-color: #f1f1f1;
+}
+.row:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+input[type="file"] {
+    line-height: 1ex;
+}
+
+.test {
+    position: relative;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.test input[type="file"] {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+}

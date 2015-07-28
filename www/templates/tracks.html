@@ -1,0 +1,32 @@
+<ion-view view-title="tracks">
+    <ion-header-bar class="title bar bar-header">
+        <button class="button icon-left ion-ios-arrow-back button-clear button-dark" ng-click="viewSongs()"></button>
+        <h1 class="title">{{data.song.artist}} - {{data.song.title}}</h1>
+        <button class="button button-clear ion-plus-round button-dark" style="margin-right: 5px" ng-click="addTrack()"></button>
+    </ion-header-bar>
+
+    <ion-content>
+        <div class="row centerHorizontal" style="width:75%; padding: 0px; margin-bottom: 5px">
+            <div class="col" style="margin: auto"><b>#</b></div>
+            <div class="col" style="margin: auto"><b>Name</b></div>
+            <div class="col" style="margin: auto"><b>Label</b></div>
+            <div class="col" style="margin: auto"><b>Track</b></div>
+            <div class="col" style="margin: auto"><b>Edit</b></div>
+        </div>
+        <div class="row centerHorizontal" style="width: 75%; padding: 0px; margin-bottom: 5px;" ng-repeat="(trackKey, track) in data.tracks">
+            <div class="col" style="margin: auto">{{$index + 1}}</div>
+            <div class="col" style="margin: auto">{{track.name}}</div>
+            <div class="col" style="margin: auto">{{track.label}}</div>
+            <div class="col" style="margin: auto">{{track.track}}</div>
+            <div class="col" style="margin: auto">
+                <button class="ion-edit" ng-click="editTrack(trackKey, track)" style="padding: 0px; font-size: 15px; background: none; border: none;"></button>
+                <button class="ion-ios-trash-outline" ng-click="deleteTrack(trackKey, track)" style="padding: 0px; padding-left: 5px; font-size: 20px; background: none; border: none;"></button>
+                <button class="ion-android-arrow-up" ng-click="moveUp(trackKey)" style="padding: 0px; padding-left: 5px; font-size: 20px; background: none; border: none;"></button>
+                <button class="ion-android-arrow-down" ng-click="moveDown(trackKey)" style="padding: 0px; padding-left: 3px; font-size: 20px; background: none; border: none;"></button>
+            </div>
+        </div>
+        <div class="col-75 centerHorizontal" style="margin-top: 20px">
+            <button class="button-block ion-person button-theme" nav-direction="forward" ng-click="logout()"> Logout</button>
+        </div>
+    </ion-content>
+</ion-view>

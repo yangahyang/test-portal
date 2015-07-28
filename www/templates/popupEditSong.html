@@ -1,0 +1,19 @@
+<div class="list">
+    <label class="item item-input">
+        <span class="input-label">Title</span>
+        <input type="text" placeholder="Title" ng-model="data.editSong.title">
+    </label>
+    <label class="item item-input">
+        <span class="input-label">Artist</span>
+        <input type="text" placeholder="Artist" ng-model="data.editSong.artist">
+    </label>
+    <label class="item item-input">
+        <span class="input-label">Genre</span>
+        <input type="text" placeholder="Genre (optional)" ng-model="data.editSong.genre">
+    </label>
+    <label class="item item-input">
+        <span class="input-label">Lyrics</span>
+        <input type="text" placeholder="Lyrics (optional)" ng-model="data.editSong.lyrics">
+    </label>
+    <div class="themeColor centerHorizontal" style="margin-top: 10px">{{data.editSong.error}}</div>
+</div>

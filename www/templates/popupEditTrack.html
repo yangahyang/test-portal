@@ -1,0 +1,19 @@
+<div class="list">
+    <label class="item item-input">
+        <span class="input-label">Name</span>
+        <input type="text" placeholder="Name" ng-model="data.editTrack.name">
+    </label>
+    <label class="item item-input">
+        <span class="input-label">Label</span>
+        <input type="text" placeholder="Label" ng-model="data.editTrack.label">
+    </label>
+    <div class="item item-input">
+        <span class="input-label">Track</span>
+        <input type="text" placeholder="Track" ng-model="data.editTrack.track" disabled>
+        <button class="test">
+            <input type="file" id="file" name="file" onchange="angular.element(this).scope().fileChanged()">
+            <span>Change</span>
+        </button>
+    </div>
+    <div class="themeColor centerHorizontal" style="margin-top: 10px">{{data.editTrack.error}}</div>
+</div>
