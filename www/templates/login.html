@@ -3,25 +3,27 @@
         <div class="row" style="height: 100%">
             <div style="width: 50%; margin: auto;">
                 <!-- logo -->
-                <div class="row" style="margin-bottom: 5px">
-                    <h1 class="centerHorizontal themeColor">OnlyHue</h1>
-                </div>
+
+                    <h1 class="centerHorizontal themeColor"><div style="font-family: 'Brioche au Potiron'; font-size: 200%;">WayPastCurfew</div></h1>
 
                 <!-- login box -->
                 <div style="width: 100%">
                     <div class="list" ng-enter="loginEmail()">
                         <label class="item item-input">
+                            <i class="icon ion-email placeholder-icon"></i>
                             <input type="text" placeholder="Email" ng-model="data.email">
                         </label>
                         <label class="item item-input">
+                            <i class="ion-locked placeholder-icon"></i>
                             <input type="password" placeholder="Password" ng-model="data.password">
                         </label>
                     </div>
                     <div class="themeColor centerHorizontal" style="margin-top: -10px">{{data.error}}</div>
                     <button class="button-block button-theme" style="margin-top: 10px" ng-click="loginEmail()">Login</button>
-                    <button class="button-block button-theme" style="margin-top: 10px" ng-click="loginFB()">Log In with Facebook</button>
+                    <button class="button-block button-theme" style="margin-top: 10px" ng-click="loginFB()">Login with Facebook</button>
                 </div>
             </div>
         </div>
     </ion-content>
 </ion-view>
+

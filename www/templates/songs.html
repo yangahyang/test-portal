@@ -1,33 +1,40 @@
 <ion-view view-title="songs">
     <ion-header-bar class="title bar bar-header">
-        <button style="background: none; border: none;" disabled>Welcome, {{data.user.first_name}} {{data.user.last_name}}! {{data.user.email}}</button>
-        <h1 class="title">Songs</h1>
+
+        <h1 class="title"><div style="font-family: 'Brioche au Potiron'; font-size: 200%; color:#005dbb;">Songs</div></h1>
         <button class="button button-clear ion-plus-round button-dark" style="margin-right: 5px" ng-click="addSong()"></button>
     </ion-header-bar>
 
     <ion-content>
-        <div class="row centerHorizontal" style="width:75%; padding: 0px; margin-bottom: 5px">
-            <div class="col" style="margin: auto"><b>#</b></div>
-            <div class="col" style="margin: auto"><b>Title</b></div>
-            <div class="col" style="margin: auto"><b>Artist</b></div>
-            <div class="col" style="margin: auto"><b>Genre</b></div>
-            <div class="col" style="margin: auto"><b>Lyrics</b></div>
-            <div class="col" style="margin: auto"><b>Edit</b></div>
+        <div>
+        <div class="button button-outline button-positive" style="font-family:Aller_Lt; font-size: 120%; width: 15%; float: left; text-align: center; margin-left: 5%; margin-top: 1%;" disabled><i class="ion-android-hand"></i> {{data.user.first_name}} {{data.user.last_name}}! <br>{{data.user.email}}</div>
+            <button class="button-block ion-person button-theme" style="width: 15%; float: left; margin-left: 5%; margin-top: 1%" nav-direction="forward" ng-click="logout()"> Logout</button>
         </div>
-        <div class="row centerHorizontal" style="width: 75%; padding: 0px; margin-bottom: 5px;" ng-repeat="(songKey, song) in data.songs">
-            <div class="col" style="margin: auto">{{$index + 1}}</div>
-            <div class="col" style="margin: auto">{{song.title}}</div>
-            <div class="col" style="margin: auto">{{song.artist}}</div>
-            <div class="col" style="margin: auto">{{song.genre}}</div>
-            <div class="col" style="margin: auto">{{song.lyrics}}</div>
-            <div class="col" style="margin: auto">
-                <button class="ion-ios-list-outline" ng-click="viewTracks(songKey, song)" style="padding: 0px; font-size: 20px; background: none; border: none;"></button>
-                <button class="ion-edit" ng-click="editSong(songKey, song)" style="padding: 0px; padding-left: 5px; padding-right: 5px; font-size: 16px; background: none; border: none;"></button>
-                <button class="ion-ios-trash-outline" ng-click="deleteSong(songKey)" style="padding: 0px; font-size: 20px; background: none; border: none;"></button>
+        <br>
+        <div class="list" style="margin-left: 25%; margin-right:10%;">
+            <div class="row centerHorizontal" style="width:75%; padding: 0px;;">
+                <div class="col" style="margin: auto"><b>#</b></div>
+                <div class="col" style="margin: auto"><b>Title</b></div>
+                <div class="col" style="margin: auto"><b>Artist</b></div>
+                <div class="col" style="margin: auto"><b>Genre</b></div>
+                <div class="col" style="margin: auto"><b>Lyrics</b></div>
+                <div class="col" style="margin: auto"><b>Edit</b></div>
             </div>
+            <div class="row centerHorizontal" style="width: 75%; padding: 0px; margin-bottom: 5px;" ng-repeat="(songKey, song) in data.songs">
+                <div class="col" style="margin: auto">{{$index + 1}}</div>
+                <div class="col" style="margin: auto">{{song.title}}</div>
+                <div class="col" style="margin: auto">{{song.artist}}</div>
+                <div class="col" style="margin: auto">{{song.genre}}</div>
+                <div class="col" style="margin: auto">{{song.lyrics}}</div>
+                <div class="col" style="margin: auto">
+                    <button class="action ion-ios-list-outline" ng-click="viewTracks(songKey, song)" style="padding: 0px; font-size: 20px; background: none; border: none;"></button>
+                    <button class="action ion-edit" ng-click="editSong(songKey, song)" style="padding: 0px; padding-left: 5px; padding-right: 5px; font-size: 16px; background: none; border: none;"></button>
+                    <button class="action ion-ios-trash-outline" ng-click="deleteSong(songKey)" style="padding: 0px; font-size: 20px; background: none; border: none;"></button>
+                </div>
+            </div>
+
         </div>
-        <div class="col-75 centerHorizontal" style="margin-top: 20px">
-            <button class="centerHorizontal button-block ion-person button-theme" nav-direction="forward" ng-click="logout()"> Logout</button>
-        </div>
+
     </ion-content>
 </ion-view>
+

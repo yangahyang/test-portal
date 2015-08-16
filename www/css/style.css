@@ -3,6 +3,7 @@
     margin-right: auto;
     width: 100%;
     text-align:center;
+    font-family: Aller_Lt;
 }
 
 @font-face {
@@ -15,6 +16,16 @@
     src: url('Century%20Gothic.ttf');
 }
 
+@font-face{
+    font-family: 'Brioche au Potiron';
+    src: url('Brioche%20au%20Potiron.ttf');
+}
+
+@font-face{
+    font-family: 'Aller_Lt';
+    src: url('Aller_Lt.ttf');
+}
+
 .mainButton{
     border: 2px solid;
     height: 100%;
@@ -22,7 +33,7 @@
     margin: auto;
     color: white;
     font-size: 30px;
-    font-family:Ebrima;
+    font-family:Aller_Lt;
 }
 
 .loginCircle{
@@ -30,14 +41,14 @@
     height: 40px;
     border-radius: 25px;
     border: 2px solid;
-    border-color: #19bfef;
+    border-color: #005dbb;
     font-size: 13px;
-    color: #19bfef;
+    color: #005dbb;
     background: none;
 }
 
 .circleFill {
-    background: #19bfef;
+    background: #005dbb;
     color: #ffffff;
 }
 
@@ -46,25 +57,25 @@
     height: 50px;
     border-radius: 25px;
     border: 2px solid;
-    border-color: #19bfef;
+    border-color: #005dbb;
     font-size: 15px;
-    color: #19bfef;
+    color: #005dbb;
     background: none;
 }
 
 .recordFill {
-    background: #19bfef;
+    background: #005dbb;
     color: #ffffff;
 }
 
 .themeColor {
     color: #005dbb;
-    font-family: Century Gothic;
+    font-family: Aller_Lt;
 }
 
 .button-theme {
-    background: #19bfef;
-    border: #19bfef;
+    background: #005dbb;
+    border: #005dbb;
     color: #ffffff;
     position: relative;
     display: inline-block;
@@ -80,6 +91,7 @@
     text-overflow: ellipsis;
     font-size: 16px;
     line-height: 42px;
+    font-family: Aller_Lt;
 }
 
 .wrapping-list .item-content, .wrapping-list .item {
@@ -112,11 +124,20 @@ input[type='button']:disabled, button:disabled
 }
 
 .row:nth-child(even) {
-    background-color: #f1f1f1;
+    background-color: #ffffff;
+    color: #005dbb;
+    border-bottom: 1px solid;
 }
 .row:nth-child(odd) {
     background-color: #ffffff;
+    color: #005dbb;
+    border-bottom: 1px solid;
 }
+
+.action{
+    color: #005dbb;
+}
+
 
 input[type="file"] {
     line-height: 1ex;
@@ -136,3 +157,8 @@ input[type="file"] {
     right: 0;
     opacity: 0;
 }
+
+.col{
+    font-family: Aller_Lt;
+}
+
