@@ -31,6 +31,7 @@ app.factory("tracksFactory", function($firebaseArray, $firebaseObject, $q) {
             firebaseArr[trackKey].name = name;
             firebaseArr[trackKey].label = label;
             firebaseArr[trackKey].track = track;
+            firebaseArr[trackKey].url = encodeURI("https://s3-ap-southeast-1.amazonaws.com/waypastcurfewtracks/" + email + "/" + songArtist.toLowerCase() + " - " + songTitle.toLowerCase() + "/" + track);
             firebaseArr.$save(trackKey);
         },
 
@@ -70,7 +71,7 @@ app.factory("tracksFactory", function($firebaseArray, $firebaseObject, $q) {
         },
 
         uploadTrack: function(name, label, file){
-            var params = { Key: file.name, ContentType: file.type, Body: file, ServerSideEncryption: 'AES256' };
+            var params = { Key: file.name, ContentType: file.type, Body: file, ServerSideEncryption: 'AES256', ACL: "public-read-write"};
 
             var deferred = $q.defer();
 
@@ -83,7 +84,7 @@ app.factory("tracksFactory", function($firebaseArray, $firebaseObject, $q) {
                     // success
                     var status = "Uploading... Done!";
                     if (name != null && label != null) {
-                        track = {name: name, label: label, track: file.name}
+                        track = {name: name, label: label, track: file.name, url: encodeURI("https://s3-ap-southeast-1.amazonaws.com/waypastcurfewtracks/" + email + "/" + songArtist.toLowerCase() + " - " + songTitle.toLowerCase() + "/" + file.name)};
                         firebaseArr.$add(track);
                     }
                     deferred.resolve(status);

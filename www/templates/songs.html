@@ -25,7 +25,7 @@
                 <div class="col" style="margin: auto">{{song.title}}</div>
                 <div class="col" style="margin: auto">{{song.artist}}</div>
                 <div class="col" style="margin: auto">{{song.genre}}</div>
-                <div class="col" style="margin: auto">{{song.lyrics}}</div>
+                <div class="col" style="margin: auto; max-width: 20%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{song.lyrics}}</div>
                 <div class="col" style="margin: auto">
                     <button class="action ion-ios-list-outline" ng-click="viewTracks(songKey, song)" style="padding: 0px; font-size: 20px; background: none; border: none;"></button>
                     <button class="action ion-edit" ng-click="editSong(songKey, song)" style="padding: 0px; padding-left: 5px; padding-right: 5px; font-size: 16px; background: none; border: none;"></button>
